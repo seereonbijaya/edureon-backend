@@ -1,0 +1,7 @@
+class UserType:
+    SUPER_ADMIN = "SUPER_ADMIN"
+    ADMIN = "ADMIN"
+    EMPLOYEE = "EMPLOYEE"
+    STUDENT = "STUDENT"
+
+    
