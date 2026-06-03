@@ -6,7 +6,7 @@ class Institute(Base):
 
     id = Column(BigInteger, primary_key=True)
     institute_name = Column(String(255))
-    institute_code = Column(String(255))
+    institute_code = Column(String(255), unique=True)
 
     institute_type = Column(String(255))
 

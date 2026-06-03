@@ -1,8 +1,6 @@
 from passlib.context import CryptContext
-
 from datetime import datetime, timedelta
-from jose import JWTError, jwt
-
+from jose import jwt
 from app.core.config import settings
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -20,9 +18,7 @@ def hash_password(password: str):
 def create_access_token(data: dict):
     payload = data.copy()
 
-    expire = datetime.utcnow() + timedelta(
-        minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES
-    )
+    expire = datetime.utcnow() + timedelta(minutes=60)
 
     payload.update({"exp": expire})
 
