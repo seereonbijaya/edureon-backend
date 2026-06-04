@@ -4,12 +4,12 @@ from sqlalchemy.orm import Session
 
 from app.database import get_db
 
-from app.schemas.auth import (
+from app.schemas.auth_schema import (
     RegisterSchema,
     LoginSchema
 )
 
-from app.services.auth_service import (
+from app.controller_service.auth_service import (
     AuthService
 )
 

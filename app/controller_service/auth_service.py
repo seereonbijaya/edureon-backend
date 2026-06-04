@@ -66,6 +66,11 @@ class AuthService:
             password,
             user.password
         ):
+            
+            print("INPUT PASSWORD:", password)
+            print("HASH FROM DB:", user.password)
+            print("HASH LENGTH:", len(user.password))
+
             raise Exception(
                 "Invalid credentials"
             )

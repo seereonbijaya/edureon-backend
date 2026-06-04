@@ -4,8 +4,8 @@ from app.core.config import settings
 from app.core.dependencies import get_current_user
 from fastapi import FastAPI
 
-from app.api.auth import router as auth_router
-from app.api.institute import router as institute_router
+from app.api_router.auth_api import router as auth_router
+from app.api_router.institute_api import router as institute_router
 
 app = FastAPI(
     title=settings.APP_NAME,)

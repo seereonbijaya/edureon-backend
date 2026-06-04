@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Optional, List
 
 class InstituteCreate(BaseModel):
     institute_name: str
@@ -28,6 +28,7 @@ class InstituteCreate(BaseModel):
 
     admin_contact_name: Optional[str]
     admin_phone: Optional[str]
+    document_ids: Optional[List[int]] = []
 
     gst_number: Optional[str]
     pan_number: Optional[str]
@@ -38,6 +39,8 @@ class InstituteUpdate(BaseModel):
     institute_name: Optional[str] = None
     institute_code: Optional[str] = None
     is_active: Optional[bool] = None
+    document_ids: Optional[List[int]] = []
+    
 
 class InstituteResponse(BaseModel):
     id: int
